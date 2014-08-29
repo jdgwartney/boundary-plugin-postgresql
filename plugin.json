@@ -32,6 +32,6 @@
             "description" : "Postgres Port",
             "type" : "password"
             
-        },
+        }
     ]
 }
