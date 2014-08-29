@@ -1,1 +1,1 @@
- curl https://api.graphdat.com/v1/plugins/private/cpu_core/leefarrar/BPPostgreSQLPlugin -X PUT -u lee@boundary.com:<your API key>
+ curl https://api.graphdat.com/v1/plugins/private/cpu_core/leefarrar/BPPostgreSQLPlugin -X PUT -u lee@boundary.com:api.1192f11ff0-1729
