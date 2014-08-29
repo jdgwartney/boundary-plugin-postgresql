@@ -1,7 +1,12 @@
 {
     "description" : "Collects statistics from PostgreSQL",
-    "command" : "python postgres_plugin.py $(host) $(port) $(database) $(username) $(password)",
-    "metrics" : ["LF_PSQL_DBCount"],
+    "command" : "python postgres_plugin.py $(host) $(port) $(database) $(username) $(password) $(source)",
+    "metrics" : ["LF_PSQL_EXLocks"],
+    "metrics" : ["LF_PSQL_RowExclusive"],
+    "metrics" : ["LF_PSQL_ShareRowExclusive"],
+    "metrics" : ["LF_PSQL_ShareUpdateExclusive"],
+    "metrics" : ["LF_PSQL_Share"],
+    "metrics" : ["LF_PSQL_AccessShare"],
     "paramSchema" : [
         {
             "title" : "host",
@@ -31,6 +36,12 @@
             "title" : "password",
             "description" : "Postgres Port",
             "type" : "password"
+            
+        },
+        {
+            "title" : "source",
+            "description" : "display name",
+            "type" : "string"
             
         }
     ]
