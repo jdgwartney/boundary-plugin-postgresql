@@ -1,0 +1,37 @@
+{
+    "description" : "Collects statistics from PostgreSQL",
+    "command" : "python rand.py $(bottomRange) $(topRange)",
+    "metrics" : ["LF_PSQL_DBCount"],
+    "paramSchema" : [
+        {
+            "title" : "host",
+            "description" : "database host name or IP",
+            "type" : "string"
+            
+        },
+        {
+            "title" : "port",
+            "description" : "Postgres Port",
+            "type" : "integer"
+            
+        },
+        {
+            "title" : "database",
+            "description" : "database name",
+            "type" : "string"
+            
+        },
+        {
+            "title" : "username",
+            "description" : "Postgres username",
+            "type" : "string"
+            
+        },
+        {
+            "title" : "password",
+            "description" : "Postgres Port",
+            "type" : "password"
+            
+        },
+    ]
+}
