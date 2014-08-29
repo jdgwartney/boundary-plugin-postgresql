@@ -1,6 +1,6 @@
 {
     "description" : "Collects statistics from PostgreSQL",
-    "command" : "python rand.py $(host) $(port) $(database) $(username) $(password)",
+    "command" : "python postgres_plugin.py $(host) $(port) $(database) $(username) $(password)",
     "metrics" : ["LF_PSQL_DBCount"],
     "paramSchema" : [
         {
