@@ -1,38 +1,41 @@
-PostgreSQL plugin for Boundary Premium
-Requires Python, PsycoPG2 module (not currently auto installed)
+#PostgreSQL Plugin for Boundary Premium
+**Requires Python, PsycoPG2 module (not currently auto installed)**
 
 To limit additional metrics the plugin currently provides the below metrics but can easily be extended to provide per DB metrics
 (see code comments) Or make custom collections if required.
 
-Currently provides these metrics:
-Lock Stats:
-PSQL_EXLocks
-PSQL_RowExclusive
-PSQL_ShareRowExclusive
-PSQL_ShareUpdateExclusive
-PSQL_Share
-PSQL_AccessShare
+**Currently provides these metrics:**  
+**Lock Stats:**
 
-Checkpoint/BGWriter stats:
-PSQL_ChkPnt_Wrt_Time
-PSQL_ChkPnts_Timed
-PSQL_Buffers_Alloc
-PSQL_Buffers_Clean
-PSQL_Buffers_Backnd_fSync
-PSQL_ChkPnt_Sync_Time
-PSQL_ChkPnts_Req
-PSQL_Buffers_Backend
-PSQL_MaxWritten_Clean
++ PSQL\_EXLocks
++ PSQL\_RowExclusive.
++ PSQL\_ShareRowExclusive.
++ PSQL\_ShareUpdateExclusive.
++ PSQL\_Share.
+*PSQL\_AccessShare
 
-Global DB Stats
-PSQL_Buffers_ChkPnt
-PSQL_blks_read
-PSQL_disk_size
-PSQL_xact_commit
-PSQL_tup_deleted
-PSQL_xact_rollback
-PSQL_blks_hit
-PSQL_tup_returned
-PSQL_tup_fetched
-PSQL_tup_updated
-PSQL_tup_inserted
+**Checkpoint/BGWriter stats:**
+
+* PSQL\_ChkPnt\_Wrt_Time.
+* PSQL\_ChkPnts_Timed.
+* PSQL\_Buffers_Alloc.
+* PSQL\_Buffers_Clean.
+* PSQL\_Buffers\_Backnd_fSync.
+* PSQL\_ChkPnt\_Sync_Time.
+* PSQL\_ChkPnts_Req.
+* PSQL\_Buffers_Backend.
+* PSQL\_MaxWritten_Clean.
+
+**Global DB Stats:**
+
+* PSQL\_Buffers_ChkPnt
+* PSQL\_blks_read
+* PSQL\_disk_size
+* PSQL\_xact_commit
+* PSQL\_tup_deleted
+* PSQL\_xact_rollback
+* PSQL\_blks_hit
+* PSQL\_tup_returned
+* PSQL\_tup_fetched
+* PSQL\_tup_updated
+* PSQL\_tup_inserted
