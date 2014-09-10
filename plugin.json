@@ -30,24 +30,32 @@
 		"PSQL_tup_updated",
 		"PSQL_tup_inserted"
 	],
+	"dashboards": [
+        { "name":"Postgres Lock Stats", "layout": "d-w=3&d-h=2&d-pad=5&d-bg=none&d-g-PSQL_EXLOCKS=0-0-1-1&d-g-PSQL_ROWEXCLUSIVE=0-1-1-1&d-g-PSQL_SHAREROWEXCLUSIVE=1-1-1-1&d-g-PSQL_SHAREUPDATEEXCLUSIVE=2-1-1-1&d-g-PSQL_SHARE=2-0-1-1&d-g-PSQL_ACCESSSHARE=1-0-1-1" },
+        { "name":"Postgres Reader Stats", "layout": "d-w=3&d-h=3&d-pad=5&d-bg=none&d-g-PSQL_CHKPNT_WRT_TIME=0-0-1-1&d-g-PSQL_CHKPNTS_TIMED=0-1-1-1&d-g-PSQL_BUFFERS_ALLOC=0-2-1-1&d-g-PSQL_BUFFERS_CLEAN=1-0-1-1&d-g-PSQL_BUFFERS_BACKND_FSYNC=1-1-1-1&d-g-PSQL_BUFFERS_BACKEND=1-2-1-1&d-g-PSQL_CHKPNTS_REQ=2-2-1-1&d-g-PSQL_CHKPNT_SYNC_TIME=2-1-1-1&d-g-PSQL_BUFFERS_CHKPNT=2-0-1-1" },
+        { "name":"Postgres DB Stats", "layout": "d-w=3&d-h=4&d-pad=5&d-bg=none&d-g-PSQL_BUFFERS_CHKPNT=0-0-1-1&d-g-PSQL_BLKS_READ=1-0-1-1&d-g-PSQL_DISK_SIZE=2-0-1-1&d-g-PSQL_XACT_COMMIT=0-1-1-1&d-g-PSQL_TUP_DELETED=1-1-1-1&d-g-PSQL_XACT_ROLLBACK=2-1-1-1&d-g-PSQL_BLKS_HIT=0-2-1-1&d-g-PSQL_TUP_RETURNED=1-2-1-1&d-g-PSQL_TUP_FETCHED=2-2-1-1&d-g-PSQL_TUP_UPDATED=0-3-1-1&d-g-PSQL_TUP_INSERTED=2-3-1-1" }
 
+    ],
     "paramSchema" : [
         {
             "title" : "host",
             "description" : "database host name or IP",
             "type" : "string"
+            "default" : "127.0.0.1"
             
         },
         {
             "title" : "port",
             "description" : "Postgres Port",
             "type" : "integer"
+            "default" : "5432"
             
         },
         {
             "title" : "database",
             "description" : "database name",
             "type" : "string"
+            "default" : "postgres"
             
         },
         {
@@ -58,7 +66,7 @@
         },
         {
             "title" : "password",
-            "description" : "Postgres Port",
+            "description" : "Postgres Password (if not required put anything)",
             "type" : "password"
             
         },
@@ -66,6 +74,7 @@
             "title" : "source",
             "description" : "display name",
             "type" : "string"
+            "default" : "My_PGSQL_Server"
             
         }
     ]

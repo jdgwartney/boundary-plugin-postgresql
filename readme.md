@@ -1,6 +1,16 @@
 #PostgreSQL Plugin for Boundary Premium
-**Requires Python, PsycoPG2 module (not currently auto installed)**
 
+##Pre requisites.
+**Requires libpq-dev & PythonDev libraries on unix environments.**
+**Requires Python, PsycoPG2 module (not currently auto installed)**
+*Tested on OSX & Ubuntu, not yet tested on Windows*
+
+The easiest way to install PsycoPG2 is using pip:  
+>curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py  
+sudo python get-pip.py  
+pip install psycopg2  
+
+##Metrics
 To limit additional metrics the plugin currently provides the below metrics but can easily be extended to provide per DB metrics
 (see code comments) Or make custom collections if required.
 
