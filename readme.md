@@ -13,7 +13,7 @@ pip install psycopg2
 ##Install as a private plugin (during beta testing)
 Use the command:
 
->curl https://api.graphdat.com/v1/plugins/private/PostgreSQL/leefarrar/BPPostgreSQLPlugin -X PUT -u <your email>:<Your API Token>
+>curl https://api.graphdat.com/v1/plugins/private/PostgreSQL/leefarrar/BPPostgreSQLPlugin -X PUT -u your email:Your API Token
   
 ##Metrics
 To limit additional metrics the plugin currently provides the below metrics but can easily be extended to provide per DB metrics
