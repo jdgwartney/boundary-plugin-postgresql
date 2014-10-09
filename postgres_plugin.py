@@ -27,11 +27,11 @@ def poll():
 	#print writerStats
 	#lock stats
 	print("POSTGRESQL_EXCLUSIVE_LOCKS", dbLocks['all']['Exclusive'], _source
-	print "POSTGRESQL_ROW_EXCLUSIVE",  dbLocks['all']['RowExclusive'], _source
-	print "POSTGRESQL_SHARE_ROW_EXCLUSIVE", dbLocks['all']['ShareRowExclusive'], _source
-	print "POSTGRESQL_SHARE_UPDATE_EXCLUSIVE", dbLocks['all']['ShareUpdateExclusive'], _source
-	print "POSTGRESQL_SHARE", dbLocks['all']['Share'], _source
-	print "POSTGRESQL_ACCESS_SHARE", dbLocks['all']['AccessShare'], _source
+	print "POSTGRESQL_ROW_EXCLUSIVE_LOCKS",  dbLocks['all']['RowExclusive'], _source
+	print "POSTGRESQL_SHARE_ROW_EXCLUSIVE_LOCKS", dbLocks['all']['ShareRowExclusive'], _source
+	print "POSTGRESQL_SHARE_UPDATE_EXCLUSIVE_LOCKS", dbLocks['all']['ShareUpdateExclusive'], _source
+	print "POSTGRESQL_SHARE_LOCKS", dbLocks['all']['Share'], _source
+	print "POSTGRESQL_ACCESS_SHARE_LOCKS", dbLocks['all']['AccessShare'], _source
 	
 	#checkpoint/bgwriter stats
 	print "POSTGRESQL_CHECKPOINT_WRITE_TIME", writerStats['checkpoint_write_time'], _source
@@ -39,8 +39,8 @@ def poll():
 	print "POSTGRESQL_BUFFERS_ALLOCATED", writerStats['buffers_alloc'], _source
 	print "POSTGRESQL_BUFFERS_CLEAN", writerStats['buffers_clean'], _source
 	print "POSTGRESQL_BUFFERS_BACKEND_FSYNC", writerStats['buffers_backend_fsync'], _source
-	print "POSTGRESQL_CHECK_POINT_SYNCHRONIZATION_TIME", writerStats['checkpoint_sync_time'], _source
-	print "POSTGRESQL_CHECK_POINTS_REQUESTED", writerStats['checkpoints_req'], _source
+	print "POSTGRESQL_CHECKPOINT_SYNCHRONIZATION_TIME", writerStats['checkpoint_sync_time'], _source
+	print "POSTGRESQL_CHECKPOINTS_REQUESTED", writerStats['checkpoints_req'], _source
 	print "POSTGRESQL_BUFFERS_BACKEND", writerStats['buffers_backend'], _source
 	print "POSTGRESQL_MAXIUM_WRITTEN_CLEAN", writerStats['maxwritten_clean'], _source
 	print "POSTGRESQL_BUFFERS_CHECKPOINT", writerStats['buffers_checkpoint'], _source
