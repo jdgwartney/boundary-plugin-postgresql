@@ -42,23 +42,21 @@ def poll():
 	print "POSTGRESQL_CHECKPOINT_SYNCHRONIZATION_TIME", writerStats['checkpoint_sync_time'], _source
 	print "POSTGRESQL_CHECKPOINTS_REQUESTED", writerStats['checkpoints_req'], _source
 	print "POSTGRESQL_BUFFERS_BACKEND", writerStats['buffers_backend'], _source
-	print "POSTGRESQL_MAXIUM_WRITTEN_CLEAN", writerStats['maxwritten_clean'], _source
+	print "POSTGRESQL_MAXIMUM_WRITTEN_CLEAN", writerStats['maxwritten_clean'], _source
 	print "POSTGRESQL_BUFFERS_CHECKPOINT", writerStats['buffers_checkpoint'], _source
 
 	#Global DB Stats
 	print "POSTGRESQL_BLOCKS_READ", dbStats['totals']['blks_read'], _source
 	print "POSTGRESQL_DISK_SIZE", dbStats['totals']['disk_size'], _source
-	print "POSTGRESQL_XACT_COMMIT", dbStats['totals']['xact_commit'], _source
+	print "POSTGRESQL_TRANSACTION_COMMIT", dbStats['totals']['xact_commit'], _source
 	print "POSTGRESQL_TUPLES_DELETED", dbStats['totals']['tup_deleted'], _source
-	print "POSTGRESQL_XACT_ROLLBACK", dbStats['totals']['xact_rollback'], _source
+	print "POSTGRESQL_TRANSACTION_ROLLBACK", dbStats['totals']['xact_rollback'], _source
 	print "POSTGRESQL_BLOCKS_HIT", dbStats['totals']['blks_hit'], _source
 	print "POSTGRESQL_TUPLES_RETURNED", dbStats['totals']['tup_returned'], _source
 	print "POSTGRESQL_TUPLES_FETCHED", dbStats['totals']['tup_fetched'], _source
 	print "POSTGRESQL_TUPLES_UPDATED", dbStats['totals']['tup_updated'], _source
 	print "POSTGRESQL_TUPLES_INSERTED", dbStats['totals']['tup_inserted'], _source
 	print "POSTGRESQL_TUPLES_FETCHED", dbStats['totals']['tup_fetched'], _source
-
-	
 	
 poll()
 
