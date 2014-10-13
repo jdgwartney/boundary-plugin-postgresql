@@ -5,7 +5,7 @@
     "metrics" : [
                  "POSTGRESQL_EXCLUSIVE_LOCKS",
                  "POSTGRESQL_ROW_EXCLUSIVE_LOCKS",
-                 "POSTGRESQL_SHARE_ROW_EXCLUSIVE",
+                 "POSTGRESQL_SHARE_ROW_EXCLUSIVE_LOCKS",
                  "POSTGRESQL_SHARE_UPDATE_EXCLUSIVE_LOCKS",
                  "POSTGRESQL_SHARE_LOCKS",
                  "POSTGRESQL_ACCESS_SHARE_LOCKS",
