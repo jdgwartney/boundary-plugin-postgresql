@@ -3,9 +3,9 @@
         {
             "defaultAggregate": "SUM",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL - Access Share Locks",
-            "displayName": "PostgreSQL - Access Share Locks",
-            "displayNameShort": "PSQL Acc Shr Lcks",
+            "description": "PostgreSQL - Locks Access Share",
+            "displayName": "PostgreSQL - Locks Access Share",
+            "displayNameShort": "PSQL - Lck Acc Shr",
             "isDisabled": 0,
             "name": "POSTGRESQL_ACCESS_SHARE_LOCKS",
             "unit": "number"
@@ -15,7 +15,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Blocks Hit",
             "displayName": "PostgreSQL - Blocks Hit",
-            "displayNameShort": "PSQL Blocks Hit",
+            "displayNameShort": "PSQL - Blks Hit",
             "isDisabled": 0,
             "name": "POSTGRESQL_BLOCKS_HIT",
             "unit": "number"
@@ -25,7 +25,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Blocks Read",
             "displayName": "PostgreSQL - Blocks Read",
-            "displayNameShort": "PSQL Blocks Read",
+            "displayNameShort": "PSQL - Blks Read",
             "isDisabled": 0,
             "name": "POSTGRESQL_BLOCKS_READ",
             "unit": "number"
@@ -35,7 +35,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL Buffers Allocated",
             "displayName": "PostgreSQL - Buffers Allocated",
-            "displayNameShort": "PSQL Bufs Alloc",
+            "displayNameShort": "PSQL - Buf Alloc",
             "isDisabled": 0,
             "name": "POSTGRESQL_BUFFERS_ALLOCATED",
             "unit": "number"
@@ -45,7 +45,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Buffers Backend",
             "displayName": "PostgreSQL - Buffers Backend",
-            "displayNameShort": "PSQL Buffers Backend",
+            "displayNameShort": "PSQL - Buf Bck",
             "isDisabled": 0,
             "name": "POSTGRESQL_BUFFERS_BACKEND",
             "unit": "number"
@@ -55,7 +55,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Buffers Backend Fsync",
             "displayName": "PostgreSQL - Buffers Backend Fsync",
-            "displayNameShort": "PSQL Buf Bck Fsync",
+            "displayNameShort": "PSQL - Buf Bck Fsync",
             "isDisabled": 0,
             "name": "POSTGRESQL_BUFFERS_BACKEND_FSYNC",
             "unit": "number"
@@ -65,7 +65,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Buffers Checkpoint",
             "displayName": "PostgreSQL - Buffers Checkpoint",
-            "displayNameShort": "PSQL Buf Chkpt",
+            "displayNameShort": "PSQL - Buf Chkpt",
             "isDisabled": 0,
             "name": "POSTGRESQL_BUFFERS_CHECKPOINT",
             "unit": "number"
@@ -75,7 +75,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Buffers Clean",
             "displayName": "PostgreSQL - Buffers Clean",
-            "displayNameShort": "PSQL Buffers Clean",
+            "displayNameShort": "PSQL - Buf Clean",
             "isDisabled": 0,
             "name": "POSTGRESQL_BUFFERS_CLEAN",
             "unit": "number"
@@ -85,7 +85,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Checkpoint Synchronization Time",
             "displayName": "PostgreSQL - Checkpoint Synchronization Time",
-            "displayNameShort": "PSQL Chkpt Sync Time",
+            "displayNameShort": "PSQL - Chkpt Sync Time",
             "isDisabled": 0,
             "name": "POSTGRESQL_CHECKPOINT_SYNCHRONIZATION_TIME",
             "unit": "number"
@@ -95,7 +95,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL Checkpoint Write Time",
             "displayName": "PostgreSQL - Checkpoint Write Time",
-            "displayNameShort": "PSQL Chkpt Wr Time",
+            "displayNameShort": "PSQL - Chkpt Wr Time",
             "isDisabled": 0,
             "name": "POSTGRESQL_CHECKPOINT_WRITE_TIME",
             "unit": "number"
@@ -105,7 +105,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Checkpoints Requested",
             "displayName": "PostgreSQL - Checkpoints Requested",
-            "displayNameShort": "PSQL Chkpts Req",
+            "displayNameShort": "PSQL Chkpt Req",
             "isDisabled": 0,
             "name": "POSTGRESQL_CHECKPOINTS_REQUESTED",
             "unit": "number"
@@ -113,9 +113,9 @@
         {
             "defaultAggregate": "SUM",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL Checkpoints Timed",
+            "description": "PostgreSQL - Checkpoints Timed",
             "displayName": "PostgreSQL - Checkpoints Timed",
-            "displayNameShort": "PSQL Chkpts Timed",
+            "displayNameShort": "PSQL - Chkpts Timed",
             "isDisabled": 0,
             "name": "POSTGRESQL_CHECKPOINTS_TIMED",
             "unit": "number"
@@ -123,9 +123,9 @@
         {
             "defaultAggregate": "SUM",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL - Exclusive Locks",
-            "displayName": "PostgreSQL - Exclusive Locks",
-            "displayNameShort": "PSQL Ex. Locks",
+            "description": "PostgreSQL - Locks Exclusive",
+            "displayName": "PostgreSQL - Locks Exclusive",
+            "displayNameShort": "PSQL - Lck Ex",
             "isDisabled": 0,
             "name": "POSTGRESQL_EXCLUSIVE_LOCKS",
             "unit": "number"
@@ -135,7 +135,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Maximum Written Clean",
             "displayName": "PostgreSQL - Maximum Written Clean",
-            "displayNameShort": "PSQL Max Writ Clean",
+            "displayNameShort": "PSQL - Max Wrt Clean",
             "isDisabled": 0,
             "name": "POSTGRESQL_MAXIMUM_WRITTEN_CLEAN",
             "unit": "number"
@@ -143,9 +143,9 @@
         {
             "defaultAggregate": "AVG",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL Row Exclusive Locks",
-            "displayName": "PostgreSQL - Row Exclusive Locks",
-            "displayNameShort": "PSQL Row Ex Locks",
+            "description": "PostgreSQL - Locks Row Exclusive",
+            "displayName": "PostgreSQL - Locks Row Exclusive",
+            "displayNameShort": "PSQL - Lck Row Ex",
             "isDisabled": 0,
             "name": "POSTGRESQL_ROW_EXCLUSIVE_LOCKS",
             "unit": "number"
@@ -153,9 +153,9 @@
         {
             "defaultAggregate": "AVG",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL Share Locks",
-            "displayName": "PostgreSQL - Share Locks",
-            "displayNameShort": "PSQL Shr Lcks",
+            "description": "PostgreSQL - Locks Share",
+            "displayName": "PostgreSQL - Locks Share",
+            "displayNameShort": "PSQL - Lck Shr",
             "isDisabled": 0,
             "name": "POSTGRESQL_SHARE_LOCKS",
             "unit": "number"
@@ -163,9 +163,9 @@
         {
             "defaultAggregate": "AVG",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL - Share Row Exclusive Locks",
-            "displayName": "PostgreSQL - Share Row Exclusive Locks",
-            "displayNameShort": "PSQL Shr Row Ex Lcks",
+            "description": "PostgreSQL - Locks Share Row Exclusive",
+            "displayName": "PostgreSQL - Locks Share Row Exclusive",
+            "displayNameShort": "PSQL - Lck Shr Row Ex",
             "isDisabled": 0,
             "name": "POSTGRESQL_SHARE_ROW_EXCLUSIVE_LOCKS",
             "unit": "number"
@@ -173,9 +173,9 @@
         {
             "defaultAggregate": "AVG",
             "defaultResolutionMS": null,
-            "description": "PostgreSQL - Share Update Exclusive Locks",
-            "displayName": "PostgreSQL - Share Update Exclusive Locks",
-            "displayNameShort": "PSQL Shr Up Ex Lcks",
+            "description": "PostgreSQL - Locks Share Update Exclusive Locks",
+            "displayName": "PostgreSQL - Locks Share Update Exclusive Locks",
+            "displayNameShort": "PSQL - Lck Shr Up Ex",
             "isDisabled": 0,
             "name": "POSTGRESQL_SHARE_UPDATE_EXCLUSIVE_LOCKS",
             "unit": "number"
@@ -185,7 +185,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Transaction Committed",
             "displayName": "PostgreSQL - Transaction Committed",
-            "displayNameShort": "PSQL Tran Committed",
+            "displayNameShort": "PSQL - Tran Commit",
             "isDisabled": 0,
             "name": "POSTGRESQL_TRANSACTIONS_COMMITTED",
             "unit": "number"
@@ -195,7 +195,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Transactions Rolledback",
             "displayName": "PostgreSQL - Transactions Rolledback",
-            "displayNameShort": "PSQL Tran Rolledback",
+            "displayNameShort": "PSQL - Tran Rollbck",
             "isDisabled": 0,
             "name": "POSTGRESQL_TRANSACTIONS_ROLLEDBACK",
             "unit": "number"
@@ -205,7 +205,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Tuples Deleted",
             "displayName": "PostgreSQL - Tuples Deleted",
-            "displayNameShort": "PSQL Tup Deleted",
+            "displayNameShort": "PSQL - Tup Deleted",
             "isDisabled": 0,
             "name": "POSTGRESQL_TUPLES_DELETED",
             "unit": "number"
@@ -215,7 +215,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Tuples Fetched",
             "displayName": "PostgreSQL - Tuples Fetched",
-            "displayNameShort": "PSQL Tup Fetched",
+            "displayNameShort": "PSQL - Tup Fetched",
             "isDisabled": 0,
             "name": "POSTGRESQL_TUPLES_FETCHED",
             "unit": "number"
@@ -225,7 +225,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Tuples Inserted",
             "displayName": "PostgreSQL - Tuples Inserted",
-            "displayNameShort": "PSQL Tup Inserted",
+            "displayNameShort": "PSQL - Tup Inserted",
             "isDisabled": 0,
             "name": "POSTGRESQL_TUPLES_INSERTED",
             "unit": "number"
@@ -235,7 +235,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Tuples Returned",
             "displayName": "PostgreSQL - Tuples Returned",
-            "displayNameShort": "PSQL Tup Returned",
+            "displayNameShort": "PSQL - Tup Returned",
             "isDisabled": 0,
             "name": "POSTGRESQL_TUPLES_RETURNED",
             "unit": "number"
@@ -245,7 +245,7 @@
             "defaultResolutionMS": null,
             "description": "PostgreSQL - Tuples Updated",
             "displayName": "PostgreSQL - Tuples Updated",
-            "displayNameShort": "PSQL Tup Updated",
+            "displayNameShort": "PSQL - Tup Updated",
             "isDisabled": 0,
             "name": "POSTGRESQL_TUPLES_UPDATED",
             "unit": "number"
@@ -253,8 +253,8 @@
         {
             "defaultAggregate": "SUM",
             "defaultResolutionMS": null,
-            "description": "PostrgreSQL - Disk Size",
-            "displayName": "PostrgreSQL - Disk Size",
+            "description": "PostgreSQL - Disk Size",
+            "displayName": "PostgreSQL - Disk Size",
             "displayNameShort": "PSQL - Disk Size",
             "isDisabled": 0,
             "name": "POSTGRESQL_DISK_SIZE",
