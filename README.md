@@ -8,19 +8,23 @@ Prerequisites
 The following items are required on the host platform in addition to the Boundary Premium [relay](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
 * Python 2.6.6 or later
 * PsycoPG2 module which the requires the following to install using pip
-* PostreSQL libpq-dev 
-* PythonDev 
+-- PostreSQL libpq-dev 
+-- PythonDev 
 
-## Installation of the PsycoPG2 library using pip:
-     '''bash
-     $ curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py  
-     $ sudo python get-pip.py
-     $ pip install psycopg2
-     '''
+### Installation of the PsycoPG2 library using pip:
+
+1. Install [pip](http://pip.readthedocs.org/en/latest/installing.html) if not already installed
+```bash
+      $ curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py  
+      $ sudo python get-pip.py
+```
+2. Install the `psycopy2` module      
+```
+      $ pip install psycopg2
+```
 
 ## Metrics
-To limit additional metrics the plugin currently provides the below metrics but can easily be extended to provide per DB metrics
-(see code comments) Or make custom collections if required.
+The plugin currently provides the below indicated metrics below, but can easily be extended to provide per database metrics or custom metrics if required.
 
 ### Lock Stats
 The following collects regarding database wide locks.
