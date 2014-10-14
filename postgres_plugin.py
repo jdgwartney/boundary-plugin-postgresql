@@ -26,37 +26,37 @@ def poll():
 	
 	#print writerStats
 	#lock stats
-	print("POSTGRESQL_EXCLUSIVE_LOCKS", dbLocks['all']['Exclusive'], _source
-	print "POSTGRESQL_ROW_EXCLUSIVE_LOCKS",  dbLocks['all']['RowExclusive'], _source
-	print "POSTGRESQL_SHARE_ROW_EXCLUSIVE_LOCKS", dbLocks['all']['ShareRowExclusive'], _source
-	print "POSTGRESQL_SHARE_UPDATE_EXCLUSIVE_LOCKS", dbLocks['all']['ShareUpdateExclusive'], _source
-	print "POSTGRESQL_SHARE_LOCKS", dbLocks['all']['Share'], _source
-	print "POSTGRESQL_ACCESS_SHARE_LOCKS", dbLocks['all']['AccessShare'], _source
+	print("POSTGRESQL_EXCLUSIVE_LOCKS {0} {1}".format(dbLocks['all']['Exclusive'], _source))
+	print("POSTGRESQL_ROW_EXCLUSIVE_LOCKS {0} {1}".format(dbLocks['all']['RowExclusive'], _source))
+	print("POSTGRESQL_SHARE_ROW_EXCLUSIVE_LOCKS {0} {1}".format(dbLocks['all']['ShareRowExclusive'], _source))
+	print("POSTGRESQL_SHARE_UPDATE_EXCLUSIVE_LOCKS {0} {1}".format(dbLocks['all']['ShareUpdateExclusive'], _source))
+	print("POSTGRESQL_SHARE_LOCKS {0} {1}".format(dbLocks['all']['Share'], _source))
+	print("POSTGRESQL_ACCESS_SHARE_LOCKS {0} {1}".format(dbLocks['all']['AccessShare'], _source))
 	
 	#checkpoint/bgwriter stats
-	print "POSTGRESQL_CHECKPOINT_WRITE_TIME", writerStats['checkpoint_write_time'], _source
-	print "POSTGRESQL_CHECKPOINTS_TIMED", writerStats['checkpoints_timed'], _source
-	print "POSTGRESQL_BUFFERS_ALLOCATED", writerStats['buffers_alloc'], _source
-	print "POSTGRESQL_BUFFERS_CLEAN", writerStats['buffers_clean'], _source
-	print "POSTGRESQL_BUFFERS_BACKEND_FSYNC", writerStats['buffers_backend_fsync'], _source
-	print "POSTGRESQL_CHECKPOINT_SYNCHRONIZATION_TIME", writerStats['checkpoint_sync_time'], _source
-	print "POSTGRESQL_CHECKPOINTS_REQUESTED", writerStats['checkpoints_req'], _source
-	print "POSTGRESQL_BUFFERS_BACKEND", writerStats['buffers_backend'], _source
-	print "POSTGRESQL_MAXIMUM_WRITTEN_CLEAN", writerStats['maxwritten_clean'], _source
-	print "POSTGRESQL_BUFFERS_CHECKPOINT", writerStats['buffers_checkpoint'], _source
+	print("POSTGRESQL_CHECKPOINT_WRITE_TIME {0} {1}".format(writerStats['checkpoint_write_time'], _source))
+	print("POSTGRESQL_CHECKPOINTS_TIMED {0} {1}".format(writerStats['checkpoints_timed'], _source))
+	print("POSTGRESQL_BUFFERS_ALLOCATED {0} {1}".format(writerStats['buffers_alloc'], _source))
+	print("POSTGRESQL_BUFFERS_CLEAN {0} {1}".format(writerStats['buffers_clean'], _source))
+	print("POSTGRESQL_BUFFERS_BACKEND_FSYNC {0} {1}".format(writerStats['buffers_backend_fsync'], _source))
+	print("POSTGRESQL_CHECKPOINT_SYNCHRONIZATION_TIME {0} {1}".format(writerStats['checkpoint_sync_time'], _source))
+	print("POSTGRESQL_CHECKPOINTS_REQUESTED {0} {1}".format(writerStats['checkpoints_req'], _source))
+	print("POSTGRESQL_BUFFERS_BACKEND {0} {1}".format(writerStats['buffers_backend'], _source))
+	print("POSTGRESQL_MAXIMUM_WRITTEN_CLEAN {0} {1}".format(writerStats['maxwritten_clean'], _source))
+	print("POSTGRESQL_BUFFERS_CHECKPOINT {0} {1}".format(writerStats['buffers_checkpoint'], _source))
 
 	#Global DB Stats
-	print "POSTGRESQL_BLOCKS_READ", dbStats['totals']['blks_read'], _source
-	print "POSTGRESQL_DISK_SIZE", dbStats['totals']['disk_size'], _source
-	print "POSTGRESQL_TRANSACTIONS_COMMITTED", dbStats['totals']['xact_commit'], _source
-	print "POSTGRESQL_TUPLES_DELETED", dbStats['totals']['tup_deleted'], _source
-	print "POSTGRESQL_TRANSACTIONS_ROLLEDBACK", dbStats['totals']['xact_rollback'], _source
-	print "POSTGRESQL_BLOCKS_HIT", dbStats['totals']['blks_hit'], _source
-	print "POSTGRESQL_TUPLES_RETURNED", dbStats['totals']['tup_returned'], _source
-	print "POSTGRESQL_TUPLES_FETCHED", dbStats['totals']['tup_fetched'], _source
-	print "POSTGRESQL_TUPLES_UPDATED", dbStats['totals']['tup_updated'], _source
-	print "POSTGRESQL_TUPLES_INSERTED", dbStats['totals']['tup_inserted'], _source
-	print "POSTGRESQL_TUPLES_FETCHED", dbStats['totals']['tup_fetched'], _source
+	print("POSTGRESQL_BLOCKS_READ {0} {1}".format(dbStats['totals']['blks_read'], _source))
+	print("POSTGRESQL_DISK_SIZE {0} {1}".format(dbStats['totals']['disk_size'], _source))
+	print("POSTGRESQL_TRANSACTIONS_COMMITTED {0} {1}".format(dbStats['totals']['xact_commit'], _source))
+	print("POSTGRESQL_TUPLES_DELETED {0} {1}".format(dbStats['totals']['tup_deleted'], _source))
+	print("POSTGRESQL_TRANSACTIONS_ROLLEDBACK {0} {1}".format(dbStats['totals']['xact_rollback'], _source))
+	print("POSTGRESQL_BLOCKS_HIT {0} {1}".format(dbStats['totals']['blks_hit'], _source))
+	print("POSTGRESQL_TUPLES_RETURNED {0} {1}".format(dbStats['totals']['tup_returned'], _source))
+	print("POSTGRESQL_TUPLES_FETCHED {0} {1}".format(dbStats['totals']['tup_fetched'], _source))
+	print("POSTGRESQL_TUPLES_UPDATED {0} {1}".format(dbStats['totals']['tup_updated'], _source))
+	print("POSTGRESQL_TUPLES_INSERTED {0} {1}".format(dbStats['totals']['tup_inserted'], _source))
+	print("POSTGRESQL_TUPLES_FETCHED {0} {1}".format(dbStats['totals']['tup_fetched'], _source))
 	
 poll()
 
