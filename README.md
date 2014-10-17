@@ -14,14 +14,14 @@ The following items are required on the host platform in addition to the Boundar
 ### Installation of the PsycoPG2 library using pip:
 
 1. Install [pip](http://pip.readthedocs.org/en/latest/installing.html) if not already installed
-```bash
-      $ curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py  
+     ```bash
+      $ curl -s https://bootstrap.pypa.io/get-pip.py > get-pip.py
       $ sudo python get-pip.py
-```
-2. Install the `psycopy2` module      
-```
+     ```
+2. Install the `psycopy2` module
+     ```bash
       $ pip install psycopg2
-```
+     ```
 
 ## Metrics
 The plugin currently provides the below indicated metrics below, but can easily be extended to provide per database metrics or custom metrics if required.
