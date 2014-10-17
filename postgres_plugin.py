@@ -2,6 +2,11 @@
 import sys
 import json
 from postgresql import PgInfo
+from os import path
+
+if (len(sys.argv) != 7):
+  sys.stderr.write("usage: {0} host port database user password source\n".format(path.basename(sys.argv[0])))
+  sys.exit(1)
 
 #grab connection info's. This is expected in the Format host/port/db/user/pwd
 _host = sys.argv[1]
