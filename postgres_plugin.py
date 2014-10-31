@@ -3,6 +3,7 @@ import sys
 import json
 from postgresql import PgInfo
 from os import path
+import time
 
 #get params from file
 paramFile="param.json"
@@ -68,8 +69,8 @@ def poll():
 	print("POSTGRESQL_TUPLES_INSERTED {0} {1}".format(dbStats['totals']['tup_inserted'], _source))
 	
 	sys.stdout.flush()
-
-poll()
-
+while True:
+	poll()
+	time.sleep(1)
 
 
