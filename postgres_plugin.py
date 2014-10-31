@@ -4,17 +4,22 @@ import json
 from postgresql import PgInfo
 from os import path
 
-if (len(sys.argv) != 7):
-  sys.stderr.write("usage: {0} host port database user password source\n".format(path.basename(sys.argv[0])))
-  sys.exit(1)
+#get params from file
+paramFile="param.json"
 
-#grab connection info's. This is expected in the Format host/port/db/user/pwd
-_host = sys.argv[1]
-_port = sys.argv[2]
-_database = sys.argv[3]
-_user = sys.argv[4]
-_password = sys.argv[5]
-_source = sys.argv[6]
+if path.isfile(paramFile):
+	with open(paramFile) as data_file:    
+		params = json.load(data_file)
+	_host = params["host"]
+	_port = params["port"]
+	_database = params["database"]
+	_user = params["username"]
+	_password = params["password"]
+	_source = params["source"]
+
+else:
+  	sys.stderr.write("Either params file is missing or is not readable")
+  	sys.exit(1)
 
 def poll():       
 	_dbconn = PgInfo(_host, _port, _database, _user, _password)
@@ -63,6 +68,7 @@ def poll():
 	print("POSTGRESQL_TUPLES_INSERTED {0} {1}".format(dbStats['totals']['tup_inserted'], _source))
 	
 	sys.stdout.flush()
+
 poll()
 
 
