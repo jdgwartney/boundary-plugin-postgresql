@@ -8,6 +8,7 @@ Prerequisites
 The following items are required on the host platform in addition to the Boundary Premium [relay](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
 * Python 2.6.6 or later
 * PsycoPG2 module which the requires the following to install: 
+
 -- PostreSQL libpq-dev 
 -- PythonDev 
 
