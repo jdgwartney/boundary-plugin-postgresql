@@ -61,8 +61,8 @@ def poll():
 	print("POSTGRESQL_TUPLES_FETCHED {0} {1}".format(dbStats['totals']['tup_fetched'], _source))
 	print("POSTGRESQL_TUPLES_UPDATED {0} {1}".format(dbStats['totals']['tup_updated'], _source))
 	print("POSTGRESQL_TUPLES_INSERTED {0} {1}".format(dbStats['totals']['tup_inserted'], _source))
-	print("POSTGRESQL_TUPLES_FETCHED {0} {1}".format(dbStats['totals']['tup_fetched'], _source))
 	
+	sys.stdout.flush()
 poll()
 
 
