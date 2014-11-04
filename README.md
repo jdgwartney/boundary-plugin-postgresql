@@ -9,7 +9,7 @@ The following items are required on the host platform in addition to the Boundar
 * Python 2.6.6 or later
 * PsycoPG2 module which the requires the following to install: 
 
--- PostreSQL libpq-dev 
+-- PostreSQL libpq-dev   
 -- PythonDev 
 
 ### Installation of the PsycoPG2 library using pip:
