@@ -1,17 +1,22 @@
 Boundary PostgreSQL Plugin
-==========================
-
+--------------------------
 **Awaiting Certification**
+
+Extracts metrics from a PostgreSQL database instance.
+
+
 
 Prerequisites
 -------------
 The following items are required on the host platform in addition to the Boundary Premium [relay](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
-* Python 2.6.6 or later
-* PsycoPG2 module which the requires the following to install using pip
--- PostreSQL libpq-dev 
--- PythonDev 
+- Python 2.6.6 or later
+- PsycoPG2 module
+- PostreSQL development packages: postgresql-devel
+- Python development packages: python-devel
 
-### Installation of the PsycoPG2 library using pip:
+### Plugin Setup
+
+#### Installation of the PsycoPG2 Library Using `pip`
 
 1. Install [pip](http://pip.readthedocs.org/en/latest/installing.html) if not already installed
 
@@ -25,48 +30,44 @@ The following items are required on the host platform in addition to the Boundar
       $ pip install psycopg2
      ```
 
-## Metrics
-The plugin currently provides the below indicated metrics below, but can easily be extended to provide per database metrics or custom metrics if required.
+### Plugin Configuration Fields
+|Field Name|Description                                       |
+|:-------|:-------------------------------------------------|
+|host    |database host name or IP                          |
+|port    |PostgreSQL Port                                   |
+|database|database name                                     |
+|username|PostgreSQL username                               |
+|password|PostgreSQL Password (if not required put anything)|
+|source  |display name                                      |
 
-### Lock Stats
-The following collects regarding database wide locks.
+### Metrics Collected
 
-|Metric Name                                    |Metric Identifier                            |Description                                    |
-|:----------------------------------------------|:--------------------------------------------|:----------------------------------------------|
-|PostgreSQL - Locks Access Share                |POSTGRESQL\_ACCESS\_SHARE\_LOCKS             |PostgreSQL - Locks Access Share                |
-|PostgreSQL - Locks Exclusive                   |POSTGRESQL\_EXCLUSIVE\_LOCKS                 |PostgreSQL - Locks Exclusive                   |
-|PostgreSQL - Locks Row Exclusive               |POSTGRESQL\_ROW\_EXCLUSIVE\_LOCKS            |PostgreSQL - Locks Row Exclusive               |
-|PostgreSQL - Locks Share Row Exclusive         |POSTGRESQL\_SHARE\_ROW\_EXCLUSIVE\_LOCKS     |PostgreSQL - Locks Share Row Exclusive         |
-|PostgreSQL - Locks Share Update Exclusive Locks|POSTGRESQL\_SHARE\_UPDATE\_EXCLUSIVE\_LOCKS  |PostgreSQL - Locks Share Update Exclusive Locks|
-|PostgreSQL - Locks Share                       |POSTGRESQL\_SHARE\_LOCKS                     |PostgreSQL - Locks Share                       |
+|Metric Name                                    |Description                                    |
+|:----------------------------------------------|:----------------------------------------------|
+|PostgreSQL - Locks Exclusive                   |PostgreSQL - Locks Exclusive                   |
+|PostgreSQL - Locks Row Exclusive               |PostgreSQL - Locks Row Exclusive               |
+|PostgreSQL - Locks Share Row Exclusive         |PostgreSQL - Locks Share Row Exclusive         |
+|PostgreSQL - Locks Share Update Exclusive Locks|PostgreSQL - Locks Share Update Exclusive Locks|
+|PostgreSQL - Locks Share                       |PostgreSQL - Locks Share                       |
+|PostgreSQL - Locks Access Share                |PostgreSQL - Locks Access Share                |
+|PostgreSQL - Checkpoint Write Time             |PostgreSQL Checkpoint Write Time               |
+|PostgreSQL - Checkpoints Timed                 |PostgreSQL - Checkpoints Timed                 |
+|PostgreSQL - Buffers Allocated                 |PostgreSQL Buffers Allocated                   |
+|PostgreSQL - Buffers Clean                     |PostgreSQL - Buffers Clean                     |
+|PostgreSQL - Buffers Backend Fsync             |PostgreSQL - Buffers Backend Fsync             |
+|PostgreSQL - Checkpoint Synchronization Time   |PostgreSQL - Checkpoint Synchronization Time   |
+|PostgreSQL - Checkpoints Requested             |PostgreSQL - Checkpoints Requested             |
+|PostgreSQL - Buffers Backend                   |PostgreSQL - Buffers Backend                   |
+|PostgreSQL - Maximum Written Clean             |PostgreSQL - Maximum Written Clean             |
+|PostgreSQL - Buffers Checkpoint                |PostgreSQL - Buffers Checkpoint                |
+|PostgreSQL - Blocks Read                       |PostgreSQL - Blocks Read                       |
+|PostgreSQL - Disk Size                         |PostgreSQL - Disk Size                         |
+|PostgreSQL - Transaction Committed             |PostgreSQL - Transaction Committed             |
+|PostgreSQL - Transactions Rolledback           |PostgreSQL - Transactions Rolledback           |
+|PostgreSQL - Blocks Hit                        |PostgreSQL - Blocks Hit                        |
+|PostgreSQL - Tuples Deleted                    |PostgreSQL - Tuples Deleted                    |
+|PostgreSQL - Tuples Fetched                    |PostgreSQL - Tuples Fetched                    |
+|PostgreSQL - Tuples Inserted                   |PostgreSQL - Tuples Inserted                   |
+|PostgreSQL - Tuples Returned                   |PostgreSQL - Tuples Returned                   |
+|PostgreSQL - Tuples Updated                    |PostgreSQL - Tuples Updated                    |
 
-
-### Checkpoint/Background Writer Stats
-
-|Metric Name                                    |Metric Identifier                            |Description                                    |
-|:----------------------------------------------|:--------------------------------------------|:----------------------------------------------|
-|PostgreSQL - Buffers Allocated                 |POSTGRESQL\_BUFFERS\_ALLOCATED               |PostgreSQL Buffers Allocated                   |
-|PostgreSQL - Buffers Backend Fsync             |POSTGRESQL\_BUFFERS\_BACKEND\_FSYNC          |PostgreSQL - Buffers Backend Fsync             |
-|PostgreSQL - Buffers Backend                   |POSTGRESQL\_BUFFERS\_BACKEND                 |PostgreSQL - Buffers Backend                   |
-|PostgreSQL - Buffers Clean                     |POSTGRESQL\_BUFFERS\_CLEAN                   |PostgreSQL - Buffers Clean                     |
-|PostgreSQL - Checkpoints Timed                 |POSTGRESQL\_CHECKPOINTS\_TIMED               |PostgreSQL - Checkpoints Timed                 |
-|PostgreSQL - Checkpoint Write Time             |POSTGRESQL\_CHECKPOINT\_WRITE\_TIME          |PostgreSQL Checkpoint Write Time               |
-|PostgreSQL - Checkpoint Synchronization Time   |POSTGRESQL\_CHECKPOINT\_SYNCHRONIZATION\_TIME|PostgreSQL - Checkpoint Synchronization Time   |
-|PostgreSQL - Checkpoints Requested             |POSTGRESQL\_CHECKPOINTS\_REQUESTED           |PostgreSQL - Checkpoints Requested             |
-|PostgreSQL - Maximum Written Clean             |POSTGRESQL\_MAXIMUM\_WRITTEN\_CLEAN          |PostgreSQL - Maximum Written Clean             |
-
-### Global Database Stats
-
-|Metric Name                                    |Metric Identifier                            |Description                                    |
-|:----------------------------------------------|:--------------------------------------------|:----------------------------------------------|
-|PostgreSQL - Blocks Hit                        |POSTGRESQL\_BLOCKS\_HIT                      |PostgreSQL - Blocks Hit                        |
-|PostgreSQL - Blocks Read                       |POSTGRESQL\_BLOCKS\_READ                     |PostgreSQL - Blocks Read                       |
-|PostgreSQL - Buffers Checkpoint                |POSTGRESQL\_BUFFERS\_CHECKPOINT              |PostgreSQL - Buffers Checkpoint                |
-|PostgreSQL - Disk Size                         |POSTGRESQL\_DISK\_SIZE                       |PostgreSQL - Disk Size                         |
-|PostgreSQL - Transaction Committed             |POSTGRESQL\_TRANSACTIONS\_COMMITTED          |PostgreSQL - Transaction Committed             |
-|PostgreSQL - Transactions Rolledback           |POSTGRESQL\_TRANSACTIONS\_ROLLEDBACK         |PostgreSQL - Transactions Rolledback           |
-|PostgreSQL - Tuples Deleted                    |POSTGRESQL\_TUPLES\_DELETED                  |PostgreSQL - Tuples Deleted                    |
-|PostgreSQL - Tuples Fetched                    |POSTGRESQL\_TUPLES\_FETCHED                  |PostgreSQL - Tuples Fetched                    |
-|PostgreSQL - Tuples Inserted                   |POSTGRESQL\_TUPLES\_INSERTED                 |PostgreSQL - Tuples Inserted                   |
-|PostgreSQL - Tuples Returned                   |POSTGRESQL\_TUPLES\_RETURNED                 |PostgreSQL - Tuples Returned                   |
-|PostgreSQL - Tuples Updated                    |POSTGRESQL\_TUPLES\_UPDATED                  |PostgreSQL - Tuples Updated                    |
