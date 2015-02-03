@@ -4,13 +4,19 @@ Boundary PostgreSQL Plugin
 
 Extracts metrics from a PostgreSQL database instance.
 
-Prerequisites
--------------
-The following items are required on the host platform in addition to the Boundary Premium [relay](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
-- Python 2.6.6 or later
-- PsycoPG2 module
-- PostreSQL development packages: postgresql-devel
-- Python development packages: python-devel
+### Prerequisites
+
+|     OS    | Linux | Windows | SmartOS | OS X |
+|:----------|:-----:|:-------:|:-------:|:----:|
+| Supported |   v   |    v    |    v    |  v   |
+
+
+|  Runtime | node.js | Python | Java |
+|:---------|:-------:|:------:|:----:|
+| Required |         |    +   |      |
+
+- [How to install Python?](https://help.boundary.com/hc/articles/202270132)
+- Python libraries: PsycoPG2, postgresql-devel, python-devel
 
 ### Plugin Setup
 
@@ -68,4 +74,3 @@ The following items are required on the host platform in addition to the Boundar
 |PostgreSQL - Tuples Inserted                   |PostgreSQL - Tuples Inserted                   |
 |PostgreSQL - Tuples Returned                   |PostgreSQL - Tuples Returned                   |
 |PostgreSQL - Tuples Updated                    |PostgreSQL - Tuples Updated                    |
-
