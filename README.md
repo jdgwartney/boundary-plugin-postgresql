@@ -4,8 +4,6 @@ Boundary PostgreSQL Plugin
 
 Extracts metrics from a PostgreSQL database instance.
 
-
-
 Prerequisites
 -------------
 The following items are required on the host platform in addition to the Boundary Premium [relay](http://premium-support.boundary.com/customer/portal/articles/1635550-plugins---how-to).
