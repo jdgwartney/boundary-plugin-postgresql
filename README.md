@@ -2,6 +2,7 @@ Boundary PostgreSQL Plugin
 --------------------------
 **Awaiting Certification**
 
+<<<<<<< HEAD
 Extracts metrics from a PostgreSQL database instance.
 
 ### Prerequisites

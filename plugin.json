@@ -1,6 +1,6 @@
 {
     "description" : "Awaiting Certification - Collects statistics from PostgreSQL Database",
-    "command" : "python postgres_plugin.py $(host) $(port) $(database) $(username) $(password) $(source)",
+    "command" : "python postgres_plugin.py",
     "icon" : "icon.png",
     "metrics" : [
                  "POSTGRESQL_EXCLUSIVE_LOCKS",
